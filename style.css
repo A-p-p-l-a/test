@@ -1,0 +1,9 @@
+#chart{
+    display: flex;
+
+}
+.comp{
+    
+    display: flex;
+    justify-content: center;
+}
