@@ -1,5 +1,5 @@
 const ethURL = 'https://ethplorer.io/service/service.php?data=0x2e458d04a349352c0c7613920a7c0d941a112501&page=pageTab%3Dtransfers&showTx=all';
-const rxdURL ='https://radiantexplorer.com/ext/getaddress/19qM6izZopGCCTNrm6omh2Gv1uQxiqZEVX';
+const rxdURL ='https://radiantexplorer.com/ext/getbalance/19qM6izZopGCCTNrm6omh2Gv1uQxiqZEVX';
 const coinsCurrency = 'https://api.coinpaprika.com/v1/tickers';
 const myCoins = [];
 const coinsPrice = [];
@@ -68,7 +68,7 @@ for (let i = 0; i < data.length; i++) {
 
 
 
- fetch(rxdURL)
+ fetch(rxdURL, { mode: 'no-cors'})
   .then(response => response.json())
   .then(eth => {
     myCoins.push(eth.balance);
